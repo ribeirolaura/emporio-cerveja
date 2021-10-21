@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import { Col, Container, Row } from 'react-bootstrap';
 import './App.css';
+import { List } from './components/Beer';
+
+// cadastro de cervejas utilizando json-server para simular a API.
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <Row>
+          <Col>
+            <h1>Cervejas</h1>
+            <List />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
